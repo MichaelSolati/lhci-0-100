@@ -1,0 +1,13 @@
+{
+  "extends": "./node_modules/gts/",
+  "rules": {
+    "node/no-unpublished-require": 0,
+    "n/no-unpublished-require": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}

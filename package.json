@@ -1,0 +1,53 @@
+{
+  "name": "lhci-0-100",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "eleventy --quiet",
+    "build:prod": "cross-env NODE_ENV=prod eleventy --quiet",
+    "build:watch": "chokidar \"src/**/*\" -c \"npm run build\"",
+    "clean": "rimraf dist",
+    "lhci": "lhci autorun",
+    "lint": "npm-run-all lint:js lint:md lint:types",
+    "lint:js": "gts lint",
+    "lint:md": "markdownlint src/site/**/*.md",
+    "lint:types": "tsc --noEmit",
+    "start": "npm-run-all clean build --parallel build:watch start:firebase",
+    "start:firebase": "firebase emulators:start",
+    "start:prod": "npm-run-all clean build:prod start:firebase",
+    "watch": "eleventy --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelSolati/lhci-0-100.git"
+  },
+  "author": "Michael Solati <mkslt04@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelSolati/lhci-0-100/issues"
+  },
+  "homepage": "https://github.com/MichaelSolati/lhci-0-100#readme",
+  "engines": {
+    "node": ">=20.0.0 <21.0.0"
+  },
+  "dependencies": {
+    "simpledotcss": "^2.3.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@lhci/cli": "^0.14.0",
+    "@types/html-minifier": "^4.0.5",
+    "@types/node": "^20.14.8",
+    "chokidar-cli": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "firebase-tools": "^13.17.0",
+    "gts": "^5.3.1",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdownlint-cli": "^0.41.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "~4.9.0"
+  }
+}
