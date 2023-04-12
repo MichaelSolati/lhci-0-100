@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "checkJs": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*", "types/**/*", "*.js"],
+  "exclude": [".github", "dist", "node_modules", ".lighthouseci"]
+}
