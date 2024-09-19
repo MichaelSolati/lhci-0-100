@@ -9,7 +9,7 @@ module.exports = {
     },
     // Asserts the conditions in the Lighthouse CI config and exits with the appropriate status code if there were any failures.
     // Assertions are keyed by the Lighthouse audit ID, you can take a look at the default Lighthouse config for all audit IDs https://github.com/GoogleChrome/lighthouse/blob/v5.5.0/lighthouse-core/config/default-config.js.
-    // See https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md#assert for more details.
+    // See https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md#assert for more details..
     assert: {
       assertions: {
         'categories:performance': ['error', {minScore: 0.9}],
